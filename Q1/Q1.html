@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>JavaScripts Q1</title>
+  <script>
+    var state = true;
+    function toggleLight() {
+      var image = document.getElementById("image");
+      state = !state;
+      image.src = state ? "../img/on.jpg" : "../img/off.jpg";
+    }
+  </script>
+</head>
+<body>
+  <img id="image" src="../img/on.jpg">
+  <button class="button" onclick="toggleLight();">ON<br>-<br>OFF</button>
+</body>
+</html>
