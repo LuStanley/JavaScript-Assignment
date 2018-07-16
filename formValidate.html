@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <form>
+    <input type="text" id="nric">
+    <input type="button" value="Confirm" onclick="validate()">
+    <p id="result"></p>
+  </form>
+  <script>
+    function validate () {
+      var code = document.getElementById("nric").value;
+      if (code == "") {
+        alert("Text can not empty")
+      }
+      else if (!isNaN(code)){
+        alert("Text can not only number")
+      }
+      else if (code.length != 10) {
+        alert("text length uncorrect")
+      }
+      else {
+        document.getElementById("result").innerHTML = "Pass Validate";
+      }
+    }
+  </script>
+
+</body>
+</html>

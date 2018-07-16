@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>addDeleteReplace</title>
+</head>
+<body>
+  <div id="container">
+    <h1>A</h1>
+    <h2>B</h2>
+  </div>
+  <script>
+    var h1 = document.createElement("h1");
+    h1.innerHTML = "some content";
+    var container = document.getElementById("container");
+    container.appendChild(h1);
+  </script>
+  <script>
+    var container = document.getElementById("container");
+    var child = container.lastChild;
+    if (child) {
+      container.removeChild(child);
+    }
+  </script>
+  <script>
+    var newContainer = document.createElement("div");
+    newContainer.innerHTML = "Replace original div container";
+    var container = document.getElementById("container");
+    newContainer.id = container.id;
+    newContainer.className = container.className;
+    container.parentNode.replaceChild(newContainer, container);
+  </script>
+</body>
+</html>
